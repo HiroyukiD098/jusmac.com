@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me - Hiroyuki Portfolio</title>
+
+    <style>
+        /* Reset and Base Styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #000;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: center;
+    background-color: #111;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 16px;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.navbar a:hover {
+    background-color: #ff4500;
+}
+
+/* Contacts Container */
+.contacts-container {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.contacts-container h1 {
+    font-size: 40px;
+    margin-bottom: 20px;
+    color: #ff6347;
+    text-shadow: 0 0 15px #f6b23e;
+}
+
+.contacts-container p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: #ffdead;
+}
+
+/* Contacts Grid */
+.contacts-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Contact Card */
+.contact-card {
+    background-color: #222;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.7);
+}
+
+.contact-icon {
+    font-size: 40px;
+    color: #ff6347;
+    margin-bottom: 15px;
+}
+
+.contact-card h2 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: #f29406;
+    text-shadow: 0 0 15px #f5c676;
+}
+
+.contact-card p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: #ddd;
+}
+
+.visit-btn {
+    display: inline-block;
+    background-color: #ff4500;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.visit-btn:hover {
+    background-color: #e03e00;
+}
+
+/* Background Animation */
+.background-animation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; /* Ensures it spans the entire viewport */
+    z-index: 0; /* Positions it behind other content */
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.background-animation div {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: linear-gradient(45deg, gray, #555);
+    opacity: 0.5;
+    animation: float 10s infinite;
+}
+
+@keyframes float {
+    from {
+        transform: translateY(100vh);
+    }
+    to {
+        transform: translateY(-10vh);
+    }
+}
+/* Footer */
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    font-size: 17px;
+    color: #ff9100;
+}
+
+    </style>
+</head>
+<body>
+    <div class="background-animation"></div>
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Me</a>
+        <a href="Projects.html">Projects</a>
+        <a href="services.html">Services</a>
+        <a href="contacts.html">Contact Me</a>
+    </div>
+    <main class="contacts-container">
+        <h1>Stay Connected</h1>
+        <p>Follow me on my social media accounts or get in touch via email.</p>
+        <div class="contacts-grid">
+            <!-- Card 1 -->
+            <div class="contact-card">
+                <i class="fab fa-facebook contact-icon"></i>
+                <h2>Facebook</h2>
+                <br>
+                <p>Follow me for updates and engage with my latest content.</p>
+                <br>
+                <a href="https://www.facebook.com/profile.php?id=100089180053360&mibextid=ZbWKwL" target="_blank" class="visit-btn">Visit</a>
+            </div>
+            <!-- Card 2 -->
+            <div class="contact-card">
+                <i class="fab fa-instagram contact-icon"></i>
+                <h2>Instagram</h2>
+                <br>
+                <p>Check out my latest artwork and visual projects.</p>
+                <br>
+                <a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.instagram.com%2Fjoshuamaclsei%2Fprofilecard%2F%3Figsh%3DMWQzd2JvMXI3OHVtbw%253D%253D%26fbclid%3DIwZXh0bgNhZW0CMTAAAR3O_LaP272LqUpGyUWWIN0kUosLVNpCGF6gxPey7S_NsJsLtlbEAKR2N0Y_aem_d4dIBIgibGTeHkrtc6nokQ&h=AT1SyD0WoA_eMb0hWiyuhP5DwunIWEKPWFSDkKcukpzwDwuJnHreXcFvDWELjTJYAMWK7hv87SwOZYJYNMSpqawxk_c7dxM6ycVQRjFxOWirgy9paLUVkAEhq1udIM_wTCY" target="_blank" class="visit-btn">Visit</a>
+            </div>
+            <!-- Card 3 -->
+            <div class="contact-card">
+                <i class="fab fa-tiktok contact-icon"></i>
+                <h2>TikTok</h2>
+                <br>
+                <p>Join me on TikTok for creative content and behind-the-scenes videos.</p>
+                <br>
+                <a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.tiktok.com%2F%40hiro.draw69%3F_t%3D8rxj3EEwKLS%26_r%3D1%26fbclid%3DIwZXh0bgNhZW0CMTAAAR2Ta1W3ObOe4cEFKZV0wO_DVZIFpyMcS2rBsUe3-xuLYIhefGqx-FbMTMc_aem_1QRQfYW14bOMqpMqMRmoqQ&h=AT1SyD0WoA_eMb0hWiyuhP5DwunIWEKPWFSDkKcukpzwDwuJnHreXcFvDWELjTJYAMWK7hv87SwOZYJYNMSpqawxk_c7dxM6ycVQRjFxOWirgy9paLUVkAEhq1udIM_wTCY" target="_blank" class="visit-btn">Visit</a>
+            </div>
+            <!-- Card 4 -->
+            <div class="contact-card">
+                <i class="fas fa-envelope contact-icon"></i>
+                <h2>Email</h2>
+                <br>
+                <p>Send me an email for inquiries and project discussions.</p>
+                <br>
+                <a href="mailto:mcakes136@gmail.com" class="visit-btn">Email Me</a>
+            </div>
+        </div>
+    </main>
+    <script src="https://fontawesome.com/kits" crossorigin="anonymous"></script>
+
+    <footer class="footer">
+        <p>&copy; 2024 Macaraig Joshua. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
+
+<script>
+    // Floating Background Animation
+document.addEventListener('DOMContentLoaded', () => {
+    const background = document.querySelector('.background-animation');
+
+    // Clear existing children (if any)
+    while (background.firstChild) {
+        background.removeChild(background.firstChild);
+    }
+
+    // Create 50 floating squares
+    for (let i = 0; i < 50; i++) {
+        const div = document.createElement('div');
+        div.style.top = Math.random() * 100 + 'vh'; // Random vertical start
+        div.style.left = Math.random() * 100 + 'vw'; // Random horizontal position
+        div.style.animationDuration = Math.random() * 5 + 5 + 's'; // Random duration
+        div.style.animationDelay = Math.random() * 5 + 's'; // Random delay
+        background.appendChild(div);
+    }
+});
+
+
+
+</script>

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hiroyuki Portfolio - Home</title>
+
+    <style>
+        /* style.css */
+
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    color: #fff;
+    background-color: #000;
+    overflow-x: hidden;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px 0;
+    background-color: #111;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.navbar a:hover {
+    background-color: #ff4500;
+}
+
+.header {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.header h1 {
+    margin-bottom: 10px;
+    color: #ff6347;
+}
+
+.header p {
+    font-size: 24px;
+    color: #ffdead;
+}
+
+.header h1 strong {
+    font-size: 45px;
+    text-shadow: 0 0 15 orange;
+}
+
+/* Background animation */
+.background-animation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.background-animation div {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: linear-gradient(45deg, gray, #555);
+    opacity: 0.5;
+    animation: float 10s infinite;
+}
+
+@keyframes float {
+    from {
+        transform: translateY(100vh) translateX(0);
+    }
+    to {
+        transform: translateY(-10vh) translateX(calc(-100px + 200px * random()));
+    }
+}
+
+.circle-profile {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: auto;
+    border: 4px solid #ff4500;
+}
+
+.projects-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    justify-content: center;
+}
+
+.projects-grid img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.projects-grid img:hover {
+    transform: scale(1.05);
+}
+
+.contact-form {
+    max-width: 500px;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #ff6347;
+    border-radius: 10px;
+    background: #111;
+}
+
+.contact-form input, .contact-form textarea, .contact-form button {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+}
+
+.contact-form button {
+    background-color: #ff4500;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: #ff6347;
+}
+
+/* Footer */
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    font-size: 17px;
+    color: #ff9100;
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header h1 {
+        font-size: 36px;
+    }
+}
+
+
+    </style>
+</head>
+<body>
+    <div class="background-animation"></div>
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Me</a>
+        <a href="Projects.html">Projects</a>
+        <a href="services.html">Services</a>
+        <a href="contacts.html">Contact Me</a>
+    </div>
+    <div class="header">
+        <h1>Welcome to <strong style="color: orange; font-size: 65px; text-shadow:0 0 15px #ffdead; ">Hiroyuki's Portfolio</strong></h1>
+        <br><br>
+        <p style="font-family: 'Courier New', Courier, monospace;">Explore my works in digital art, traditional art, videography, and video editing.</p>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2024 Macaraig Joshua. All rights reserved.</p>
+    </footer>
+</body>
+</html>
+
+<script>
+    // script.js
+
+// Create random positions for background animation
+document.addEventListener('DOMContentLoaded', () => {
+    const background = document.querySelector('.background-animation');
+    for (let i = 0; i < 50; i++) {
+        const div = document.createElement('div');
+        div.style.top = Math.random() * 100 + 'vh';
+        div.style.left = Math.random() * 100 + 'vw';
+        div.style.animationDuration = Math.random() * 5 + 5 + 's';
+        background.appendChild(div);
+    }
+});
+</script>
