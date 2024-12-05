@@ -251,4 +251,257 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
+</script><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - Hiroyuki Portfolio</title>
+
+    <style>
+        /* Reset and Base Styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #000;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: center;
+    background-color: #111;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 16px;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.navbar a:hover, .navbar a.active {
+    background-color: #ff4500;
+}
+
+/* Services Container */
+.services-container {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.services-container h1 {
+    font-size: 40px;
+    margin-bottom: 30px;
+    color: #ff6347;
+    text-shadow: 0 0 15px #f6b23e;
+}
+
+.service-item {
+    margin: 30px auto;
+    max-width: 600px;
+    text-align: left;
+    background-color: #222;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    position: relative;
+}
+
+.service-item h2 {
+    color: #f98406;
+    text-shadow: 0 0 15px #f6b23e;
+    margin-bottom: 10px;
+}
+
+.service-item p {
+    margin: 10px 0;
+    color: #ddd;
+}
+
+.p1 {
+    margin: 10px 0;
+    color: #ff4500;
+}
+
+.service-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+}
+
+.learn-more-btn {
+    background-color: #ff4500;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.learn-more-btn:hover {
+    background-color: #e03e00;
+}
+
+.service-details {
+    display: none;
+    margin-top: 10px;
+    background-color: #333;
+    padding: 15px;
+    border-radius: 5px;
+    color: #fff;
+}
+
+
+/* Background Animation */
+.background-animation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; /* Ensures it spans the entire viewport */
+    z-index: 0; /* Positions it behind other content */
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.background-animation div {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: linear-gradient(45deg, gray, #555);
+    opacity: 0.5;
+    animation: float 10s infinite;
+}
+
+@keyframes float {
+    from {
+        transform: translateY(100vh);
+    }
+    to {
+        transform: translateY(-10vh);
+    }
+}
+/* Footer */
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    font-size: 17px;
+    color: #ff9100;
+}
+    </style>
+</head>
+<body>
+    <div class="background-animation"></div>
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Me</a>
+        <a href="Projects.html">Projects</a>
+        <a href="services.html" class="active">Services</a>
+        <a href="contacts.html">Contact Me</a>
+    </div>
+    <main class="services-container">
+        <h1>My Services</h1>
+        <div class="service-item">
+            <h2>Digital Art</h2>
+            <br>
+            <p>Create stunning and detailed digital illustrations for personal or professional use.</p>
+            <br>
+            <button class="learn-more-btn" data-service="digital-art">Learn More</button>
+            <div class="service-details" id="digital-art">
+                <p1>From concept art to polished illustrations, I use the latest tools and techniques to bring your ideas to life in vivid color and detail.</p1>
+            </div>
+        </div>
+        <div class="service-item">
+            <h2>Traditional Art</h2>
+            <br>
+            <p>Handcrafted artworks with a classic touch of traditional techniques.</p>
+            <br>
+            <button class="learn-more-btn" data-service="traditional-art">Learn More</button>
+            <div class="service-details" id="traditional-art">
+                <p1>Using mediums like pencil, ink, and watercolor, I deliver timeless artworks full of depth and personality.</p1>
+            </div>
+        </div>
+        <div class="service-item">
+            <h2>Videography</h2>
+            <br>
+            <p>Professional video shooting and editing for events, projects, and promotions.</p>
+            <br>
+            <button class="learn-more-btn" data-service="videography">Learn More</button>
+            <div class="service-details" id="videography">
+                <p1>Capture the essence of any moment with high-quality video production, creative storytelling, and cinematic editing.</p1>
+            </div>
+        </div>
+        <div class="service-item">
+            <h2>Video Editing</h2>
+            <br>
+            <p>Turn raw footage into engaging and impactful videos.</p>
+            <br>
+            <button class="learn-more-btn" data-service="video-editing">Learn More</button>
+            <div class="service-details" id="video-editing">
+                <p1>With advanced editing software and creative techniques, I create videos that captivate and inspire.</p1>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <p>&copy; 2024 Macaraig Joshua. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
+
+<script>
+    // Handle Learn More Buttons
+document.addEventListener('DOMContentLoaded', () => {
+    const buttons = document.querySelectorAll('.learn-more-btn');
+
+    buttons.forEach((button) => {
+        button.addEventListener('click', () => {
+            const serviceId = button.dataset.service;
+            const details = document.getElementById(serviceId);
+
+            if (details.style.display === 'block') {
+                details.style.display = 'none'; // Hide details
+                button.textContent = 'Learn More'; // Reset button text
+            } else {
+                details.style.display = 'block'; // Show details
+                button.textContent = 'Show Less'; // Update button text
+            }
+        });
+    });
+});
+
+// Floating Background Animation
+document.addEventListener('DOMContentLoaded', () => {
+    const background = document.querySelector('.background-animation');
+
+    // Clear existing children (if any)
+    while (background.firstChild) {
+        background.removeChild(background.firstChild);
+    }
+
+    // Create 50 floating squares
+    for (let i = 0; i < 50; i++) {
+        const div = document.createElement('div');
+        div.style.top = Math.random() * 100 + 'vh'; // Random vertical start
+        div.style.left = Math.random() * 100 + 'vw'; // Random horizontal position
+        div.style.animationDuration = Math.random() * 5 + 5 + 's'; // Random duration
+        div.style.animationDelay = Math.random() * 5 + 's'; // Random delay
+        background.appendChild(div);
+    }
+});
+
+
+
 </script>
