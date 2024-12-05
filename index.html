@@ -6,22 +6,23 @@
     <title>Hiroyuki Portfolio - Home</title>
 
     <style>
-        /* style.css */
-
-body {
+        /* Reset and Base Styles */
+body, html {
     margin: 0;
+    padding: 0;
     font-family: 'Arial', sans-serif;
-    color: #fff;
     background-color: #000;
+    color: #fff;
     overflow-x: hidden;
+    min-height: 100%;
 }
 
+/* Navbar */
 .navbar {
     display: flex;
     justify-content: center;
-    gap: 20px;
-    padding: 20px 0;
     background-color: #111;
+    padding: 15px 0;
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -30,13 +31,14 @@ body {
 .navbar a {
     color: #fff;
     text-decoration: none;
-    font-size: 18px;
-    padding: 8px 15px;
+    margin: 0 15px;
+    font-size: 16px;
+    padding: 8px 12px;
     border-radius: 5px;
     transition: background-color 0.3s ease;
 }
 
-.navbar a:hover {
+.navbar a:hover, .navbar a.active {
     background-color: #ff4500;
 }
 
@@ -59,16 +61,16 @@ body {
     font-size: 45px;
     text-shadow: 0 0 15 orange;
 }
-
-/* Background animation */
+/* Background Animation */
 .background-animation {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 100%; /* Ensures it spans the entire viewport */
+    z-index: 0; /* Positions it behind other content */
     pointer-events: none;
-    z-index: -1;
+    overflow: hidden;
 }
 
 .background-animation div {
@@ -82,12 +84,13 @@ body {
 
 @keyframes float {
     from {
-        transform: translateY(100vh) translateX(0);
+        transform: translateY(100vh);
     }
     to {
-        transform: translateY(-10vh) translateX(calc(-100px + 200px * random()));
+        transform: translateY(-10vh);
     }
 }
+
 
 .circle-profile {
     width: 150px;
@@ -176,7 +179,7 @@ body {
     <div class="header">
         <h1>Welcome to <strong style="color: orange; font-size: 65px; text-shadow:0 0 15px #ffdead; ">Hiroyuki's Portfolio</strong></h1>
         <br><br>
-        <p style="font-family: 'Courier New', Courier, monospace;">Explore my works in digital art, traditional art, videography, and video editing.</p>
+        <p style="font-family: 'Courier New', Courier, monospace;">Explore my works in <strong>digital art</strong>,<strong> traditional art</strong> , <strong>videography</strong>, and <strong>video editing</strong>.</p>
     </div>
 
     <footer class="footer">
@@ -187,16 +190,26 @@ body {
 
 <script>
     // script.js
-
-// Create random positions for background animation
+// Floating Background Animation
 document.addEventListener('DOMContentLoaded', () => {
     const background = document.querySelector('.background-animation');
+
+    // Clear existing children (if any)
+    while (background.firstChild) {
+        background.removeChild(background.firstChild);
+    }
+
+    // Create 50 floating squares
     for (let i = 0; i < 50; i++) {
         const div = document.createElement('div');
-        div.style.top = Math.random() * 100 + 'vh';
-        div.style.left = Math.random() * 100 + 'vw';
-        div.style.animationDuration = Math.random() * 5 + 5 + 's';
+        div.style.top = Math.random() * 100 + 'vh'; // Random vertical start
+        div.style.left = Math.random() * 100 + 'vw'; // Random horizontal position
+        div.style.animationDuration = Math.random() * 5 + 5 + 's'; // Random duration
+        div.style.animationDelay = Math.random() * 5 + 's'; // Random delay
         background.appendChild(div);
     }
 });
+
+
+
 </script>
